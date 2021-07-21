@@ -7,13 +7,21 @@ Sets up a directory for a Unity project, for development using VSCode.
  - `.gitignore`
  - `omnisharp.json`
 
+## Quickstart
+
+If you don't want to read the rest of this README, and trust it'll all turn out ok:
+```
+curl -L https://github.com/Oblongmana/unity-vscode-base-config/tarball/main | tar -zxv --strip-components=1 --exclude='LICENSE' --exclude='README'
+./scripts/setupVSCodeUnityConfig.sh
+```
+
 ## Adding to project
 
 This is a github template repo, so can be used with the Web Interface "Use this template" button.
 
 You should be able to use the `gh` cli tool to create a new repo using this one as a template, but it appears bugged at present.
 
-Alternatively, you could also use curl:
+Alternatively (and my preferred approach, especially as it doesn't require a github repo to be created), you could also use curl:
 ```
 # Copies the repo without creating a .git file, by pulling a tarball, and extracting everything except license and readme.
 #   If you'd like to include those for some reason, just remove the --exclude items from this command
