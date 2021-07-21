@@ -9,7 +9,7 @@ Sets up a directory for a Unity project, for development using VSCode.
 
 ## Quickstart
 
-If you don't want to read the rest of this README, and trust it'll all turn out ok:
+If you don't want to read the rest of this README, and trust it'll all turn out ok (do read it at least once, so you know what it's doing. After all, you are downloading and extracting a random tarball, then executing a shell script):
 ```
 curl -L https://github.com/Oblongmana/unity-vscode-base-config/tarball/main | tar -zxv --strip-components=1 --exclude='LICENSE' --exclude='README'
 ./scripts/setupVSCodeUnityConfig.sh
@@ -40,10 +40,20 @@ Run `./scripts/setupVSCodeUnityConfig.sh`
 
 Requires:
  - `jq`
- - Should otherwise be fairly portable
+ - Should otherwise be fairly portable, let me know if you use this repo and hit any issues
 
 This adds the `omnisharp.json` config needed to run the `Microsoft.Unity.Analyzers` in VSCode, after retrieving them to a `NuGet` folder.
 
 This will also update a standard Unity `.gitignore`, with the aforementioned Analyzers excluded.
 
 Alternatively, either of those steps can be completed separately with `./scripts/getLatestAnalyzers.sh` and `./scripts/getLatestGitignore.sh`
+
+## Why?
+
+- Running through Unity tutorials leads to a lot of projects being created, each of which requires the setup executed here. This turns that into a trivial task.
+- While the official doc is great, it's always easy to miss a step in fiddly multi-step processes (especially when we're using some things not strictly designed for VSCode, but rather Visual Studio).
+- Having a convenient way to keep standard .gitignore and Analyzers up-to-date.
+- Reducing the amount of fishing around for rules to ignore in `.editorconfig`, while waiting on suppressor support in VSCode for the Unity Analyzers
+
+## TODO:
+- Depending on if/when suppressor support lands, possibly worth a script to sync `.editorconfig` with latest
