@@ -1,0 +1,13 @@
+#cf. https://www.reddit.com/r/Unity3D/comments/kbonih/how_to_enable_unity_warnings_in_visual_studio_code/
+#cf. also https://github.com/OmniSharp/omnisharp-roslyn/pull/2182 - we might be getting suppressor support soon which could obsolete this?
+root=true
+
+[*.cs]
+# Remove IDE0051 Remove unused private member; Unity's MonoBehaviour methods (Awake, Start, etc) are viewed as unused
+dotnet_diagnostic.IDE0051.severity = none
+dotnet_diagnostic.IDE0044.severity = none
+# https://developercommunity.visualstudio.com/t/ide0052-identifies-unity-method-update-as-never-ca/1299963
+# IDE0052 can be ignored, will be tripped even when using a field in e.g. Inspector. Trade-off here is fine
+dotnet_diagnostic.IDE0052.severity = none
+# Affects IDE0090 Simply `new` expression; set to `true` for C# 9.0; otherwise set to `false`
+csharp_style_implicit_object_creation_when_type_is_apparent = false
