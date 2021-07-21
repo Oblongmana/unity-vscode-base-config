@@ -50,7 +50,7 @@ Alternatively, either of those steps can be completed separately with `./scripts
 
 ## Why?
 
-- Running through Unity tutorials leads to a lot of projects being created, each of which requires the setup executed here. This turns that into a trivial task.
+- Running through Unity tutorials leads to a lot of projects being created, each of which requires the setup executed here if you want Unity warnings to appear (and a proper `.gitignore`). This turns that into a trivial task.
 - While the official doc is great, it's always easy to miss a step in fiddly multi-step processes (especially when we're using some things not strictly designed for VSCode, but rather Visual Studio).
 - Having a convenient way to keep standard .gitignore and Analyzers up-to-date.
 - Reducing the amount of fishing around for rules to ignore in `.editorconfig`, while waiting on suppressor support in VSCode for the Unity Analyzers
