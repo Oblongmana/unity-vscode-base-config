@@ -11,7 +11,7 @@ Sets up a directory for a Unity project, for development using VSCode.
 
 If you don't want to read the rest of this README, and trust it'll all turn out ok (do read it at least once, so you know what it's doing. After all, you are downloading and extracting a random tarball, then executing a shell script):
 ```
-curl -L https://github.com/Oblongmana/unity-vscode-base-config/tarball/main | tar -zxv --strip-components=1 --exclude='LICENSE' --exclude='README'
+curl -L https://github.com/Oblongmana/unity-vscode-base-config/tarball/main | tar -zxv --strip-components=1 --exclude='LICENSE' --exclude='README.md'
 ./scripts/setupVSCodeUnityConfig.sh
 ```
 
@@ -25,7 +25,7 @@ Alternatively (and my preferred approach, especially as it doesn't require a git
 ```
 # Copies the repo without creating a .git file, by pulling a tarball, and extracting everything except license and readme.
 #   If you'd like to include those for some reason, just remove the --exclude items from this command
-curl -L https://github.com/Oblongmana/unity-vscode-base-config/tarball/main | tar -zxv --strip-components=1 --exclude='LICENSE' --exclude='README'
+curl -L https://github.com/Oblongmana/unity-vscode-base-config/tarball/main | tar -zxv --strip-components=1 --exclude='LICENSE' --exclude='README.md'
 ```
 
 You could of course also clone the repo somewhere, and manually copy the files you want. There's not too many, don't overthink it!
