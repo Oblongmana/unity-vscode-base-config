@@ -7,6 +7,14 @@ Sets up a directory for a Unity project, for development using VSCode.
  - `.gitignore`
  - `omnisharp.json`
 
+## Table of Contents
+- [Quickstart](#quickstart)
+- [Adding to project](#adding-to-project)
+- [Setup](#setup)
+- [Why?](#why)
+- [Sources:](#sources)
+- [TODO:](#todo)
+
 ## Quickstart
 
 If you don't want to read the rest of this README, and trust it'll all turn out ok (do read it at least once, so you know what it's doing. After all, you are downloading and extracting a random tarball, then executing a shell script):
@@ -51,9 +59,16 @@ Alternatively, either of those steps can be completed separately with `./scripts
 ## Why?
 
 - Running through Unity tutorials leads to a lot of projects being created, each of which requires the setup executed here if you want Unity warnings to appear (and a proper `.gitignore`). This turns that into a trivial task.
-- While the official doc is great, it's always easy to miss a step in fiddly multi-step processes (especially when we're using some things not strictly designed for VSCode, but rather Visual Studio).
+- While the official doc is great (https://code.visualstudio.com/docs/other/unity#_enabling-unity-warnings), it's always easy to miss a step in fiddly multi-step processes, especially when we're using some things not strictly designed for VSCode, but rather Visual Studio
 - Having a convenient way to keep standard .gitignore and Analyzers up-to-date.
 - Reducing the amount of fishing around for rules to ignore in `.editorconfig`, while waiting on suppressor support in VSCode for the Unity Analyzers
+
+## Sources:
+- Official Doc for setting up Analyzers: https://code.visualstudio.com/docs/other/unity#_enabling-unity-warnings
+- General additional rules for `.editorconfig`: https://www.reddit.com/r/Unity3D/comments/kbonih/how_to_enable_unity_warnings_in_visual_studio_code/
+- Rules for `.editorconfig` around unused methods: https://developercommunity.visualstudio.com/t/ide0052-identifies-unity-method-update-as-never-ca/1299963
+- Unity `.gitignore` is pulled by scripts from: https://github.com/github/gitignore
+- Microsoft.Unity.Analyzers analyzers are pulled from NuGet (human-friendly page: https://www.nuget.org/packages/Microsoft.Unity.Analyzers/) using NuGet API (https://docs.microsoft.com/en-us/nuget/api)
 
 ## TODO:
 - Depending on if/when suppressor support lands, possibly worth a script to sync `.editorconfig` with latest

@@ -1,3 +1,4 @@
+#cf. https://code.visualstudio.com/docs/other/unity#_enabling-unity-warnings
 #cf. https://www.reddit.com/r/Unity3D/comments/kbonih/how_to_enable_unity_warnings_in_visual_studio_code/
 #cf. also https://github.com/OmniSharp/omnisharp-roslyn/pull/2182 - we might be getting suppressor support soon which could obsolete this?
 root=true
