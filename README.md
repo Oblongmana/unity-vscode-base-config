@@ -6,6 +6,7 @@ Sets up a directory for a Unity project, for development using VSCode.
  - `.editorconfig`
  - `.gitignore`
  - `omnisharp.json`
+ - `Assets/Editor/EditorShortcutKeys.cs`
 
 ## Table of Contents
 - [Quickstart](#quickstart)
@@ -38,10 +39,17 @@ curl -L https://github.com/Oblongmana/unity-vscode-base-config/tarball/main | ta
 
 You could of course also clone the repo somewhere, and manually copy the files you want. There's not too many, don't overthink it!
 
-Note that this step will set up `.editorconfig`, and a `.gitignore`, which may initially be out of date.
+**As noted in the warning above, this creates the following files, or will overwrite existing ones. If you're doing this into an existing project, I suggest committing first, and checking the diff after.**
+ - `.editorconfig`
+ - `.gitignore`
+ - `omnisharp.json`
+ - `Assets/Editor/EditorShortcutKeys.cs`
 
-This will also setup an `omnisharp.json` which won't work out of the box - proceed to the Setup section for that.
+Note that as this step copies this repo, it sets up `.editorconfig`, and a `.gitignore`, which may initially be out of date (and can be updated in the next section).
 
+The `omnisharp.json` won't work out of the box - proceed to the Setup section for that.
+
+The `EditorShortcutKeys.cs` file just lets you press F5 to Play/Stop - feel free to delete it if you're fine with defaults (Ctrl + P or clicking the Play Button).
 ## Setup
 
 Run `./scripts/setupVSCodeUnityConfig.sh`
@@ -62,6 +70,7 @@ Alternatively, either of those steps can be completed separately with `./scripts
 - While the official doc is great (https://code.visualstudio.com/docs/other/unity#_enabling-unity-warnings), it's always easy to miss a step in fiddly multi-step processes, especially when we're using some things not strictly designed for VSCode, but rather Visual Studio
 - Having a convenient way to keep standard .gitignore and Analyzers up-to-date.
 - Reducing the amount of fishing around for rules to ignore in `.editorconfig`, while waiting on suppressor support in VSCode for the Unity Analyzers
+- I personally don't like pressing Ctrl + P to run/stop. F5 is better.
 
 ## Sources:
 - Official Doc for setting up Analyzers: https://code.visualstudio.com/docs/other/unity#_enabling-unity-warnings
@@ -69,6 +78,7 @@ Alternatively, either of those steps can be completed separately with `./scripts
 - Rules for `.editorconfig` around unused methods: https://developercommunity.visualstudio.com/t/ide0052-identifies-unity-method-update-as-never-ca/1299963
 - Unity `.gitignore` is pulled by scripts from: https://github.com/github/gitignore
 - Microsoft.Unity.Analyzers analyzers are pulled from NuGet (human-friendly page: https://www.nuget.org/packages/Microsoft.Unity.Analyzers/) using NuGet API (https://docs.microsoft.com/en-us/nuget/api)
+- F5 to Play/Stop: https://support.unity.com/hc/en-us/articles/210719486-Enter-Play-Mode-with-F5-key
 
 ## TODO:
 - Depending on if/when suppressor support lands, possibly worth a script to sync `.editorconfig` with latest
