@@ -24,6 +24,8 @@ curl -L https://github.com/Oblongmana/unity-vscode-base-config/tarball/main | ta
 ./scripts/setupVSCodeUnityConfig.sh
 ```
 
+NOTE: You will likely need to reopen VSCode (or use the Developer: Reload Window command) to get things up and running.
+
 ## Adding to project
 
 This is a github template repo, so can be used with the Web Interface "Use this template" button.
@@ -53,6 +55,8 @@ The `EditorShortcutKeys.cs` file just lets you press F5 to Play/Stop - feel free
 ## Setup
 
 Run `./scripts/setupVSCodeUnityConfig.sh`
+
+NOTE: You will likely need to reopen VSCode (or use the Developer: Reload Window command) to get things up and running.
 
 Requires:
  - `jq`
