@@ -21,7 +21,7 @@ Sets up a directory for a Unity project, for development using VSCode.
 If you don't want to read the rest of this README, and trust it'll all turn out ok (do read it at least once, so you know what it's doing. After all, you are downloading and extracting a random tarball, then executing a shell script):
 ```
 curl -L https://github.com/Oblongmana/unity-vscode-base-config/tarball/main | tar -zxv --strip-components=1 --exclude='LICENSE' --exclude='README.md'
-./scripts/setupVSCodeUnityConfig.sh
+./tools/setupVSCodeUnityConfig.sh
 ```
 
 NOTE: You will likely need to reopen VSCode (or use the Developer: Reload Window command) to get things up and running.
@@ -54,7 +54,7 @@ The `omnisharp.json` won't work out of the box - proceed to the Setup section fo
 The `EditorShortcutKeys.cs` file just lets you press F5 to Play/Stop - feel free to delete it if you're fine with defaults (Ctrl + P or clicking the Play Button).
 ## Setup
 
-Run `./scripts/setupVSCodeUnityConfig.sh`
+Run `./tools/setupVSCodeUnityConfig.sh`
 
 NOTE: You will likely need to reopen VSCode (or use the Developer: Reload Window command) to get things up and running.
 
@@ -66,7 +66,7 @@ This adds the `omnisharp.json` config needed to run the `Microsoft.Unity.Analyze
 
 This will also update a standard Unity `.gitignore`, with the aforementioned Analyzers excluded.
 
-Alternatively, either of those steps can be completed separately with `./scripts/getLatestAnalyzers.sh` and `./scripts/getLatestGitignore.sh`
+Alternatively, either of those steps can be completed separately with `./tools/getLatestAnalyzers.sh` and `./tools/getLatestGitignore.sh`
 
 ## Why?
 

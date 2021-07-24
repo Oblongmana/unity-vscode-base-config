@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "###### .gitignore setup ######"
-./scripts/getLatestGitignore.sh
+./tools/getLatestGitignore.sh
 
 echo "###### Unity Analyzers setup ######"
-./scripts/getLatestAnalyzers.sh
+./tools/getLatestAnalyzers.sh
