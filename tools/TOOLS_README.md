@@ -22,8 +22,3 @@ The tools directory provides the following scripts:
 1. `./tools/setupVSCodeUnityConfig.sh` - Runs scripts 2 & 3 below
 2. `./tools/getLatestAnalyzers.sh` - This adds the `omnisharp.json` config needed to run the `Microsoft.Unity.Analyzers` in VSCode, after retrieving them to a `NuGet` folder.
 3. `./tools/getLatestGitignore.sh` - This will also update a standard Unity `.gitignore`, with the aforementioned Analyzers excluded.
-
-This adds the `omnisharp.json` config needed to run the `Microsoft.Unity.Analyzers` in VSCode, after retrieving them to a `NuGet` folder.
-
-This will also update a standard Unity `.gitignore`, with the aforementioned Analyzers excluded.
-
